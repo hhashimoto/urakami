@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { db } from '$lib/db.js';
-	import { liveQuery } from 'dexie';
+    import { db } from '$lib/db.js';
+    import { liveQuery } from 'dexie';
 
     let content = "";
     let saving = false;
