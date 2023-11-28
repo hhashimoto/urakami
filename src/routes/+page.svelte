@@ -10,6 +10,8 @@
     );
 
     async function save() {
+        if (saving) return;
+
         try {
             saving = true;
             const id = await db.papers.add({
@@ -26,7 +28,7 @@
     }
 
     async function handleKeyUp(e: KeyboardEvent) {
-        if (e.ctrlKey && e.key === 'Enter' && !saving) {
+        if (e.ctrlKey && e.key === 'Enter') {
             save();
         }
     }
